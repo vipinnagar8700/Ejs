@@ -1,0 +1,21 @@
+<%- include('menubar'); %> 
+<html>
+    <body>
+        <h1>hello form ejs </h1>
+
+        <h3> Data Loaded from indes.js is :  <%= subheading%></h3>
+
+
+        <br>
+        <h1>data loop</h1>
+
+        <ul>
+        <% characters.forEach(function(character) { %>
+            <li class="ui segment">
+              <strong><%= character.name %></strong>
+              is <%= character.designation %> at hogwarts.
+            </li>
+          <% }); %>
+        </ul>
+    </body>
+</html>
